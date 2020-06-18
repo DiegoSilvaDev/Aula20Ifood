@@ -17,7 +17,7 @@ namespace Ifood
                 if(decisao1 == "Sim"){
                     System.Console.WriteLine("Aqui está um restaurante famoso:\n");
                     Restaurante bk = new Restaurante();
-                    bk.NomeR = "BurguerKing";
+                    bk.NomeR = "BurgerKing";
                     bk.Endereco = "R. Voluntários da Pátria, 2325";
                     Console.ForegroundColor = ConsoleColor.Blue; 
                     System.Console.WriteLine(bk.MostrarDados());
