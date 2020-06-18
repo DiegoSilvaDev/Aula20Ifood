@@ -6,6 +6,7 @@ namespace Ifood
     {
         static void Main(string[] args)
         {
+            string[] Itens = new string[2]{"Whopper + Chicken Sandwich","Big Mac + Coca 500ML"};
             Cliente cl = new Cliente();
             Console.WriteLine("Digite seu nome");
             cl.Nome = Console.ReadLine();
@@ -14,7 +15,7 @@ namespace Ifood
             System.Console.WriteLine("Deseja fazer algum pedido?");
             string decisao1 = Console.ReadLine();    
                 if(decisao1 == "Sim"){
-                    System.Console.WriteLine("Aqui está um restaurante famoso\n");
+                    System.Console.WriteLine("Aqui está um restaurante famoso:\n");
                     Restaurante bk = new Restaurante();
                     bk.NomeR = "BurguerKing";
                     bk.Endereco = "R. Voluntários da Pátria, 2325";
@@ -31,7 +32,7 @@ namespace Ifood
                         Restaurante mc = new Restaurante();
                         mc.NomeR = "McDonalds";
                         mc.Endereco = "R. Voluntários da Pátria, 2273/2279";
-                        System.Console.WriteLine("Aqui está outro restaurante famoso\n");
+                        System.Console.WriteLine("Aqui está outro restaurante famoso:\n");
                         System.Console.WriteLine(mc.MostrarDados());
                         Console.ResetColor();
                         Pedido p2 = new Pedido();
@@ -43,6 +44,7 @@ namespace Ifood
                         p2.PedidoPago = false;
                         p2.Value = 25.50f;
                         System.Console.WriteLine(p2.MostrarDados());
+                        System.Console.WriteLine("Você pediu: "+Itens[1]);
                         System.Console.WriteLine(p2.EntregarPedido());
 
 
@@ -54,9 +56,12 @@ namespace Ifood
                         p1.PedidoPago = true;
                         p1.Value = 14.99f;
                         System.Console.WriteLine(p1.MostrarDados());
+                        System.Console.WriteLine("Você pediu: "+Itens[0]);
                         System.Console.WriteLine(p1.EntregarPedido());
 
                     }
+            }else{
+                System.Console.WriteLine("Houve algum erro na digitação, Desligando...");
             }
         
         }

@@ -2,17 +2,13 @@ namespace Ifood
 {
     public class Pedido
     {
-        public string[] Itens  { get; set; }
+        public string[] Itens { get; set; }
         public string Cliente { get; set; }
         public string Restaurante { get; set; }
         public string FormaDePGTO { get; set; }
         public bool PedidoPago { get; set; }
-        public float Value { get; set; }
+        public float Value { get; set; }        
 
-
-        // private void Pedido(){
-            
-        // }
         public string EntregarPedido(){
             if(PedidoPago == true){
                 return "\nO pedido está a caminho!\n";
